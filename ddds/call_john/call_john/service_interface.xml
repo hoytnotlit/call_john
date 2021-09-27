@@ -11,14 +11,13 @@
         </target>
     </action>
 
-    <action name="Number">
+    <query name="phone_number">
         <parameters>
             <parameter predicate="selected_contact" format="value"/>
             <parameter predicate="phone_type" format="value"/>
         </parameters>
-        <failure_reasons/>
         <target>
-            <http endpoint="http://http-service/action_success_response"/>
+            <http endpoint="http://http-service/phone_number"/>
         </target>
-    </action>
+    </query>
 </service_interface>
