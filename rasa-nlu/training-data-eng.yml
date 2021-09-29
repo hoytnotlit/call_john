@@ -8,25 +8,75 @@ nlu:
     - I want to call
     - call [John's](call_john.sort.contact)
     - call [John](call_john.sort.contact)
+    - call [Mary's](call_john.sort.contact)
+    - call [Mary](call_john.sort.contact)
     - call [john](call_john.sort.contact)
+    - call [mary](call_john.sort.contact)
     - call [John's](call_john.sort.contact)
-      [mobile](call_john.sort.phone)
+      [home](call_john.sort.phone)
     - call [John](call_john.sort.contact)
       [mobile](call_john.sort.phone)
+    - call [Mary's](call_john.sort.contact)
+      [mobile](call_john.sort.phone)
+    - call [Mary](call_john.sort.contact)
+      [home](call_john.sort.phone)
     - call [john](call_john.sort.contact)
       [mobile](call_john.sort.phone)
+    - call [mary](call_john.sort.contact)
+      [home](call_john.sort.phone)
+
+- intent: call_john:question::phone_number
+  examples: |
+    - know a contact's number
+    - I want to know a contact's number
+    - I want to know a number
+    - what is [John's](call_john.sort.contact) number
+    - what is [John](call_john.sort.contact) number
+    - what is [Mary's](call_john.sort.contact) number
+    - what is [Mary](call_john.sort.contact) number
+    - what is [john](call_john.sort.contact) number
+    - what is [mary](call_john.sort.contact) number
+    - what is [John's](call_john.sort.contact) [work](call_john.sort.phone)
+    - what is [John](call_john.sort.contact) [work](call_john.sort.phone)
+    - what is [Mary's](call_john.sort.contact) [home](call_john.sort.phone)
+    - what is [Mary](call_john.sort.contact) [work](call_john.sort.phone)
+    - what is [john](call_john.sort.contact) [mobile](call_john.sort.phone)
+    - what is [mary](call_john.sort.contact) [mobile](call_john.sort.phone)
 
 - intent: call_john:answer
   examples: |
+    - [single](call_john.sort.string)
+    - [double word](call_john.sort.string)
+    - [three in one](call_john.sort.string)
+    - [hey make it four](call_john.sort.string)
+    - [the more the merrier five](call_john.sort.string)
+    - [calm down and count to six](call_john.sort.string)
+    - [bring them through to the jolly seven](call_john.sort.string)
+    - [noone counts toes like an eight toed guy](call_john.sort.string)
+    - [it matters to make sense for nine of us](call_john.sort.string)
+    - [would you bring ten or none to a desert island](call_john.sort.string)
     - [mobile](call_john.sort.phone)
     - [mobile phone](call_john.sort.phone)
     - [mobile number](call_john.sort.phone)
     - [cell](call_john.sort.phone)
+    - [work](call_john.sort.phone)
+    - [work phone](call_john.sort.phone)
+    - [work number](call_john.sort.phone)
+    - [home](call_john.sort.phone)
+    - [home phone](call_john.sort.phone)
+    - [home number](call_john.sort.phone)
     - [John](call_john.sort.contact)
     - [John's](call_john.sort.contact)
     - [john](call_john.sort.contact)
+    - [Mary](call_john.sort.contact)
+    - [Mary's](call_john.sort.contact)
+    - [mary](call_john.sort.contact)
+    - yes [single](call_john.sort.string)
     - yes [mobile](call_john.sort.phone)
+    - yes [John](call_john.sort.contact)
+    - no [double word](call_john.sort.string)
     - no [mobile phone](call_john.sort.phone)
+    - no [John's](call_john.sort.contact)
 
 - intent: call_john:answer_negation
   examples: |
@@ -34,9 +84,18 @@ nlu:
     - not [mobile phone](call_john.sort.phone)
     - not [mobile number](call_john.sort.phone)
     - not [cell](call_john.sort.phone)
+    - not [work](call_john.sort.phone)
+    - not [work phone](call_john.sort.phone)
+    - not [work number](call_john.sort.phone)
+    - not [home](call_john.sort.phone)
+    - not [home phone](call_john.sort.phone)
+    - not [home number](call_john.sort.phone)
     - not [John](call_john.sort.contact)
     - not [John's](call_john.sort.contact)
     - not [john](call_john.sort.contact)
+    - not [Mary](call_john.sort.contact)
+    - not [Mary's](call_john.sort.contact)
+    - not [mary](call_john.sort.contact)
 
 - intent: NEGATIVE
   examples: |
@@ -282,11 +341,29 @@ nlu:
     - John's
     - john
 
+- synonym: call_john:contact_mary
+  examples: |
+    - Mary
+    - Mary's
+    - mary
+
 - synonym: call_john:mobile
   examples: |
     - mobile
     - mobile phone
     - mobile number
     - cell
+
+- synonym: call_john:work
+  examples: |
+    - work
+    - work phone
+    - work number
+
+- synonym: call_john:home
+  examples: |
+    - home
+    - home phone
+    - home number
 
 
